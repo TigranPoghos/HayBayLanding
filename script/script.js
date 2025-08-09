@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clipPath: "inset(0% 0% 0% 0%)"
     })
 
+    
 
 
 
