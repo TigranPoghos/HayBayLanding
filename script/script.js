@@ -26,15 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     tl.to('.main__fon', {
-        width: 0,
-        height: 0,
+        opacity: 0,
         duration: 0.5
     }, '<')
 
     tl.to('.arrow', {
-          duration: 2,
-  ease: "power2.inOut",
-  clipPath: "inset(0% 0% 0% 0%)"
+        duration: 2,
+        ease: "power2.inOut",
+        clipPath: "inset(0% 0% 0% 0%)"
     })
 
 
