@@ -171,6 +171,10 @@ body {
     left: 0;
 }
 
+.arrow {
+      clip-path: inset(0 0 100% 0);
+}
+
 .titleGsap {
     z-index: 1000;
     color: rgb(245, 222, 179, .4);

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(DrawSVGPlugin,MorphSVGPlugin,ScrollTrigger)
     const mm = gsap.matchMedia();
     const tl = gsap.timeline();
 
@@ -31,18 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 0.5
     }, '<')
 
+    tl.to('.arrow', {
+          duration: 2,
+  ease: "power2.inOut",
+  clipPath: "inset(0% 0% 0% 0%)"
+    })
 
 
 
-
-
-
-
-
-
-
-
-    
 
 
 
