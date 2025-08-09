@@ -1,0 +1,361 @@
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+button {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+    line-height: normal;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    scrollbar-width: thin;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 90px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.header {
+    flex: 0 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.main {
+    flex: 1 0 auto;  
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "Oswald", sans-serif;
+}
+
+.title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 120%;
+    color: #000;
+}
+
+.button__text {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header {
+    margin: 30px 0;
+
+    &__row {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 50px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__address {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+        color: #000;
+        opacity: .5;
+    }
+
+    &__button {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__logo {
+        & a {
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 36px;
+            color: #000;
+            margin-right: 85px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 30px;
+        margin-right: auto;
+
+        &-text {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+
+    &__number {
+        & a {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.main__fon {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.titleGsap {
+    z-index: 1000;
+    color: rgb(245, 222, 179, .4);
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    display: inline-block;
+    background: linear-gradient(90deg, rgb(245, 222, 179) 0%, rgb(245, 222, 179) 0%) no-repeat;
+    background-size: 0% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.product {
+    padding: 100px 0 185px;
+
+    &__left {
+        & svg {
+            margin-top: 83px;
+        }
+    }
+
+    &__row {
+        gap: 5px;
+        padding: 0 50px;
+    }
+
+    &__title {
+        max-width: 700px;
+        // margin-bottom: 35px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 27px;
+
+        &-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        &-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: #000;
+        }
+
+        &-text {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 25px;
+    }
+
+    &__button {
+        border-radius: 50px;
+        padding: 13px 25px 13px 24px;
+        background: #f00;
+        max-width: max-content;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+.service {
+    margin-bottom: 45px;
+
+    &__row {
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 54px;
+        color: #000;
+        margin: 0 auto 4px auto;
+    }
+
+    &__line {
+        height: 2px;
+        width: 1066px;
+        background: #000;
+        margin: 0 auto 14px auto;
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        margin: 0 auto 32px auto;
+    }
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            padding: 20px;
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            background: #d9d9d9;
+            margin-right: 20px;
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+        }
+
+        &-text {
+            margin-top: auto;
+            margin-bottom: 7px;
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 16px;
+            color: #000;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.print {
+    margin-bottom: 45px;
+
+    &__row {
+        flex-direction: column;
+    }
+}
+
+.about {
+    &__row {
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 54px;
+        color: #000;
+        margin-left: 50px;
+        margin-bottom: 4px;
+    }
+
+    &__line {
+        height: 2px;
+        width: 978px;
+        background: #000;
+        margin-bottom: 61px;
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        color: #000;
+        margin-left: 50px;
+        margin-bottom: 7px;
+    }
+
+    &__text {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        margin-left: 50px;
+        margin-bottom: 8px;
+        max-width: 500px;
+    }
+}
