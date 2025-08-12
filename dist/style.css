@@ -49,6 +49,7 @@ body {
   flex-direction: column;
   overflow: hidden;
   background-color: #EEE8DF;
+  font-family: "Manrope";
 }
 
 .container {
@@ -76,13 +77,7 @@ body {
   flex-direction: column;
 }
 
-:root {
-  --font-family: "Open Sans", sans-serif;
-  --second-family: "Oswald", sans-serif;
-}
-
 .title {
-  font-family: var(--second-family);
   font-weight: 700;
   font-size: 54px;
   line-height: 120%;
@@ -90,7 +85,6 @@ body {
 }
 
 .button__text {
-  font-family: var(--font-family);
   font-weight: 800;
   font-size: 14px;
   color: #fff;
@@ -110,18 +104,19 @@ body {
   align-items: center;
 }
 .header__address {
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 16px;
-  color: #171515;
+  color: #16192f;
   opacity: 0.5;
 }
 .header__button {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 .header__logo {
   margin-right: 85px;
+  flex-shrink: 0;
 }
 .header__middle {
   margin-right: auto;
@@ -139,16 +134,14 @@ body {
   margin-left: 17px;
 }
 .header__menu-text {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  color: #171515;
+  color: #16192f;
 }
 .header__number a {
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 16px;
-  color: #171515;
+  color: #16192f;
 }
 .header__bottom {
   display: flex;
@@ -157,7 +150,7 @@ body {
 }
 
 .main__fon {
-  background-color: #000;
+  background-color: #16192F;
   width: 100vw;
   height: 100vh;
   z-index: 100;
@@ -187,7 +180,7 @@ body {
 .product {
   position: relative;
   padding: 50px 0 0 0;
-  height: calc(100vh - 224.6px);
+  height: calc(100vh - 249.8px);
   box-sizing: border-box;
 }
 .product__left img {
@@ -217,23 +210,15 @@ body {
   gap: 10px;
   align-items: center;
 }
-.product__menu-circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: #16192F;
-}
 .product__menu-text {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   color: #16192F;
 }
 .product__subtitle {
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 16px;
-  color: #000;
+  color: #16192f;
   margin-bottom: 25px;
 }
 .product__button {
@@ -253,23 +238,21 @@ body {
   flex-direction: column;
 }
 .service__title {
-  font-family: var(--second-family);
   font-weight: 700;
   font-size: 54px;
-  color: #000;
+  color: #16192f;
   margin: 0 auto 4px auto;
 }
 .service__line {
   height: 2px;
   width: 1066px;
-  background: #000;
+  background: #16192f;
   margin: 0 auto 14px auto;
 }
 .service__subtitle {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  color: #000;
+  color: #16192f;
   margin: 0 auto 32px auto;
 }
 .service__box {
@@ -293,10 +276,9 @@ body {
 .service__box-text {
   margin-top: auto;
   margin-bottom: 7px;
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
-  color: #000;
+  color: #16192f;
   text-transform: uppercase;
 }
 
@@ -307,37 +289,180 @@ body {
   flex-direction: column;
 }
 
+.about {
+  position: relative;
+  overflow: hidden;
+}
 .about__row {
   flex-direction: column;
+  padding-bottom: 300px;
 }
 .about__title {
-  font-family: var(--second-family);
   font-weight: 700;
   font-size: 54px;
-  color: #000;
+  color: #16192f;
   margin-left: 50px;
   margin-bottom: 4px;
 }
 .about__line {
   height: 2px;
-  width: 978px;
-  background: #000;
-  margin-bottom: 61px;
+  max-width: 737px;
+  width: 100%;
+  background: #16192f;
+  margin-bottom: 10px;
 }
 .about__subtitle {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
-  color: #000;
+  color: #16192f;
   margin-left: 50px;
-  margin-bottom: 7px;
+  margin-bottom: 30px;
 }
 .about__text {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  color: #000;
+  color: #16192f;
   margin-left: 50px;
   margin-bottom: 8px;
   max-width: 500px;
+}
+.about__right {
+  position: absolute;
+  right: -39px;
+  top: 0;
+}
+.about__right-fon {
+  position: absolute;
+  right: 0;
+  bottom: 90px;
+  z-index: -1;
+}
+
+.portfolio {
+  position: relative;
+  margin-top: -140px;
+}
+.portfolio__fon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.portfolio__container {
+  padding: 0;
+}
+.portfolio__row {
+  padding: 125px 0 119px 0;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+}
+.portfolio__title {
+  font-weight: 700;
+  font-size: 54px;
+  color: #fff;
+  margin-left: 143px;
+  margin-bottom: 51px;
+}
+.portfolio__box {
+  display: flex;
+}
+.portfolio__box-item {
+  width: 33.3333%;
+  height: 673px;
+}
+.portfolio__box-item:first-child {
+  background: #d9d9d9;
+}
+.portfolio__box-item:nth-child(2) {
+  background: #8b8b8b;
+}
+.portfolio__box-item:last-child {
+  background: #5e5e5e;
+}
+
+.faq__row {
+  flex-direction: column;
+  padding: 60px 0 100px;
+}
+.faq__title {
+  font-weight: 700;
+  font-size: 54px;
+  color: #16192f;
+}
+.faq__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  color: #16192f;
+  opacity: 0.8;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.faq__bottom-item {
+  max-width: 920px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #16192f;
+  display: flex;
+  flex-direction: column;
+}
+.faq__bottom-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 20px 0;
+  box-sizing: border-box;
+}
+.faq__bottom-question span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #16192f;
+  overflow-wrap: break-word;
+}
+.faq__bottom-question-svg path {
+  transition: stroke 1s ease;
+  stroke: #ff0000;
+}
+.faq__bottom-question-svg {
+  transition: transform 1s ease;
+}
+.faq__bottom-question-svg.active {
+  transform: rotate(180deg);
+}
+.faq__bottom-question-svg.active path {
+  stroke: #fff;
+}
+.faq__bottom-question-active {
+  display: none;
+}
+.faq__bottom-question-active.active {
+  display: block;
+}
+.faq__bottom-line {
+  width: 0;
+  background-color: #16192f;
+  height: 1px;
+  transition: width 1s ease;
+}
+.faq__bottom-line.active {
+  width: 100%;
+}
+.faq__bottom-answer {
+  font-weight: 400;
+  font-size: 16px;
+  color: #16192f;
+  padding: 0 30px 0 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease, padding 0.4s ease;
+}
+.faq__bottom-answer.active {
+  height: auto;
+  padding: 20px 30px 20px 0;
+}
+.faq__bottom-answer.active .faq__bottom-answer-text {
+  opacity: 1;
+}
+.faq__bottom-answer-text {
+  opacity: 0;
+  transition: opacity 1s ease 0.2s;
+  overflow-wrap: break-word;
 }
