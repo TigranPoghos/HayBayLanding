@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, '<');
 
         tl.to('body', {
-            overflow: 'auto'
+            overflowY: 'auto'
         });
 
         // Второй блок анимаций
@@ -58,6 +58,16 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 1,
             ease: "power2.inOut"
         }, '<');
+
+        tl.from('.header__top', {
+            bottom: '100px',
+            duration: 1,
+        }, '<')
+
+        tl.from('.header__logo', {
+            x: -250,
+            duration: 1,
+        }, '<')
 
         // Сохраняем отметку, что анимация уже проигрывалась
         sessionStorage.setItem("visited", "true");
@@ -93,9 +103,194 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 1,
             ease: "power2.inOut"
         }, '<');
+
+        tl.from('.product__right', {
+            y: 20,
+            duration: 1,
+        }, '<');
+
+        tl.from('.header__top', {
+            bottom: '100px',
+            duration: 1,
+        }, '<')
+
+        tl.from('.header__logo', {
+            x: -250,
+            duration: 1,
+        }, '<')
     }
 
 
+    document.querySelectorAll ('.service__title').forEach
+    (serviceTitle => {
+        if (serviceTitle) {
+            gsap.from(serviceTitle, {
+                y: 20,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: serviceTitle,
+                    start: '100% bottom',
+                    scrub: false,
+                }
+            })
+        }
+    })
+
+    document.querySelectorAll ('.service__line').forEach
+    (serviceLine => {
+        if (serviceLine) {
+            gsap.to(serviceLine, {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                duration: 1,
+                ease: "power2.inOut",
+            scrollTrigger: {
+                    trigger: serviceLine,
+                    start: 'bottom 95%',
+                    scrub: false,
+                }
+            })
+        }
+    })
+
+    document.querySelectorAll ('.service__subtitle').forEach
+    (serviceSubtitle => {
+        if (serviceSubtitle) {
+            gsap.from(serviceSubtitle, {
+                y: 20,
+                duration: 1,
+            scrollTrigger: {
+                    trigger: serviceSubtitle,
+                    start: '100% bottom',
+                    scrub: false,
+                }
+            })
+        }
+    })
+
+    gsap.from('.about__title', {
+        y: 20,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.about__title',
+            start: '100% bottom',
+            scrub: false
+        }
+    }) 
+
+    gsap.to('.about__line', {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            trigger: '.about__line',
+            start: 'bottom 95%',
+            scrub: false,
+        }
+    })
+
+    gsap.from('.about__right', {
+        x: 600,
+        duration: 1,
+        scrollTrigger: {
+            start: 'bottom bottom',
+            trigger: '.about__right-fon',
+            scrub: false
+        }
+    })
+
+    gsap.from('.portfolio__fon', {
+        x: -2440,
+        duration: 1.5,
+        scrollTrigger: {
+            trigger: '.portfolio__box',
+            start: 'top 80%',
+            scrub: false
+        }
+    })
+
+    gsap.to('.portfolio__title', {
+        color: '#EEE8DF',
+        scrollTrigger: {
+            trigger: '.portfolio__box',
+            start: 'top 80%',
+            scrub: false
+        }
+    })
+
+    gsap.from('.portfolio__title', {
+        y: 20,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.portfolio__title',
+            start: '100% bottom',
+            scrub: false
+        }
+    })
+
+    gsap.from('.faq__title', {
+        y: 20,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.faq__title',
+            start: '100% bottom',
+            scrub: false
+        }
+    })
+
+    gsap.to('.faq__line', {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            trigger: '.faq__line',
+            start: 'bottom 95%',
+            scrub: false,
+        }
+    })
+
+    gsap.from('.faq__subtitle', {
+        y: 20,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.faq__subtitle',
+            start: '100% bottom',
+            scrub: false
+        }
+    })
+
+    document.querySelectorAll('.FaqJs__item').forEach
+    (faqItem => {
+        gsap.from(faqItem, {
+            x: -1000,
+            duration: 1,
+            scrollTrigger: {
+                trigger: faqItem,
+                start: '100% bottom',
+                scrub: false
+            }
+        })
+    }) 
+
+    gsap.from('.faq__letter', {
+        x: 500,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.faq__letter',
+            start: '100% bottom',
+            scrub: false,
+        }
+    })
+
+    gsap.from('.footer__container', {
+        y: 250,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.footer',
+            start: '100% bottom',
+            scrub: false
+        }
+    })
+    
 
 
 
@@ -172,29 +367,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Получаем кнопки меню
     const buttons = {
-    service: document.querySelector('.btn-service'),
-    about: document.querySelector('.btn-about'),
-    project: document.querySelector('.btn-portfolio'),
-    faq: document.querySelector('.btn-faq'),
-    footer: document.querySelector('.btn-footer')
+        service: document.querySelector('.btn-service'),
+        about: document.querySelector('.btn-about'),
+        project: document.querySelector('.btn-portfolio'),
+        faq: document.querySelector('.btn-faq'),
+        footer: document.querySelector('.btn-footer'),
+        footer2: document.querySelector('.btn-footer2')
     };
 
     // Получаем целевые секции
     const sections = {
-    service: document.querySelector('.service'),
-    about: document.querySelector('.about'),
-    project: document.querySelector('.portfolio'),
-    faq: document.querySelector('.faq'),
-    footer: document.querySelector('.footer')
+        service: document.querySelector('.service'),
+        about: document.querySelector('.about'),
+        project: document.querySelector('.portfolio'),
+        faq: document.querySelector('.faq'),
+        footer: document.querySelector('.footer')
     };
 
     // Добавляем обработчики клика на кнопки
     for (const key in buttons) {
-    buttons[key]?.addEventListener('click', () => {
-        sections[key]?.scrollIntoView({ behavior: 'smooth' });
-    });
+        buttons[key]?.addEventListener('click', () => {
+            if (key === 'footer2') {
+                sections.footer?.scrollIntoView({ behavior: 'smooth' }); // дополнительная кнопка ведёт на футер
+            } else {
+                sections[key]?.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     }
-
 
 
 
