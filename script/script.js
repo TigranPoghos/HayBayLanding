@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tl.to('.titleGsap', {
             left: 'auto',
             bottom: 'auto',
-            duration: 1,
+            duration: .7,
         });
 
         tl.to('.titleGsap', {
@@ -165,6 +165,36 @@ document.addEventListener("DOMContentLoaded", () => {
             if (FaqJs__line) FaqJs__line.classList.toggle('active');
         });
     });    
+
+
+
+
+
+    // Получаем кнопки меню
+    const buttons = {
+    service: document.querySelector('.btn-service'),
+    about: document.querySelector('.btn-about'),
+    project: document.querySelector('.btn-portfolio'),
+    faq: document.querySelector('.btn-faq'),
+    footer: document.querySelector('.btn-footer')
+    };
+
+    // Получаем целевые секции
+    const sections = {
+    service: document.querySelector('.service'),
+    about: document.querySelector('.about'),
+    project: document.querySelector('.portfolio'),
+    faq: document.querySelector('.faq'),
+    footer: document.querySelector('.footer')
+    };
+
+    // Добавляем обработчики клика на кнопки
+    for (const key in buttons) {
+    buttons[key]?.addEventListener('click', () => {
+        sections[key]?.scrollIntoView({ behavior: 'smooth' });
+    });
+    }
+
 
 
 

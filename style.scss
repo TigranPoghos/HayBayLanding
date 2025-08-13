@@ -44,12 +44,12 @@ html {
 }
 
 body {
-    height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background-color: #EEE8DF;
     font-family: 'Manrope';
+    position: relative;
 }
 
 .container {
@@ -434,6 +434,14 @@ body {
 }
 
 .faq {
+    position: relative;
+
+    &__letter {
+        position: absolute;
+        top: 142px;
+        right: 97px;
+    }
+
     &__row {
         flex-direction: column;
         padding: 60px 0 100px;
@@ -479,7 +487,7 @@ body {
 
             &-svg path {
                 transition: stroke 1s ease;
-                stroke: #ff0000;
+                stroke: #EEE8DF;
             }
 
             &-svg {
@@ -489,8 +497,12 @@ body {
                     transform: rotate(180deg);
                 }
 
+                &.active rect {
+                    fill: #EEE8DF;
+                }
+
                 &.active path {
-                    stroke: #fff;
+                    stroke: #2C365E;
                 }
             }
 
@@ -540,4 +552,56 @@ body {
             }
         }
     }
+}
+
+.footer {
+    padding-bottom: 80px;
+
+    &__text {
+        font-weight: 700;
+        font-size: 16px;
+        color: #171515;
+        opacity: .8;
+        max-width: 215px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 292%;
+        color: #171515;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 80px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__middle {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 80px;
+    }
+
+    &__button {
+        margin-top: 5px;
+    }
+}
+
+.advertising {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #171515;
 }
