@@ -208,6 +208,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    gsap.from('.portfolio__fon-1920', {
+        x: -3000,
+        duration: 1.5,
+        scrollTrigger: {
+            trigger: '.portfolio__box',
+            start: 'top 80%',
+            scrub: false
+        }
+    })
+
     gsap.to('.portfolio__title', {
         color: '#EEE8DF',
         scrollTrigger: {
@@ -281,8 +291,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    gsap.from('.footer__container', {
-        y: 250,
+    gsap.to('.footer__container', {
+        y: 0,
         duration: 1,
         scrollTrigger: {
             trigger: '.footer',

@@ -285,6 +285,11 @@ body {
         display: flex;
         gap: 10px;
         align-items: center;
+
+        &:hover {
+            opacity: .8;
+            transition: .4s;
+        }
     }
 }
 
@@ -381,6 +386,7 @@ body {
         background: linear-gradient(45deg, #16192f 0%, #EEE8DF 100%);
         margin-bottom: 10px;
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        margin-left: 50px;
     }
 
     &__subtitle {      
@@ -402,7 +408,7 @@ body {
 
     &__right {
         position: absolute;
-        right: -39px;
+        right: 0;
         top: 0;
 
         &-img {
@@ -441,7 +447,7 @@ body {
     }
 
     &__row {
-        padding: 125px 0 119px 0;
+        padding-top: 125px;
         flex-direction: column;
         position: relative;
         z-index: 5;
@@ -460,7 +466,7 @@ body {
 
         &-item {
             width: 33.3333%;
-            height: 792px;
+            height: 673px;
 
             &:first-child {
                 background: #d9d9d9;
@@ -493,7 +499,7 @@ body {
 
     &__row {
         flex-direction: column;
-        padding: 60px 0 100px;
+        padding: 60px 50px 100px 50px;
     }
 
     &__title {
@@ -527,6 +533,7 @@ body {
             align-items: center;
             padding: 30px 30px 20px 0;
             box-sizing: border-box;
+            gap: 20px;
 
             & span {
                 font-weight: 400;
@@ -607,6 +614,14 @@ body {
 .footer {
     overflow: hidden;
     padding-bottom: 80px;
+
+    &__row {
+        padding: 0 50px;
+    }
+
+    &__container {
+        transform: translateY(200%);
+    }
 
     &__text {
         font-weight: 700;
@@ -751,6 +766,8 @@ body {
     }
 
     .product {
+        height: calc(100vh - 335px);
+
         &__button {
             padding: 20px 35px;
         }
@@ -782,13 +799,15 @@ body {
         }
 
         &__stand {
-            bottom: 110px;
+            bottom: 50px;
             right: 90px;
             max-width: 470px;
         }
     }
 
     .service {
+        margin-bottom: 70px;
+
         &__subtitle {
             font-size: 20px;
             margin-bottom: 42px;
@@ -800,7 +819,10 @@ body {
 
         &__box {
             &-item {
+                width: calc(25% - 19px);
                 height: 400px;
+                margin-bottom: 20px;
+                margin-right: 25px;
             }
 
             &-text {
@@ -811,6 +833,10 @@ body {
                 padding: 15px 25px;
             }
         }
+    }
+
+    .print {
+        margin-bottom: 70px;
     }
 
     .about {
@@ -871,6 +897,12 @@ body {
         &__bottom-item {
             max-width: 1150px;
         }
+
+        &__line {
+            & svg {
+                width: 988px;
+            }
+        }
     }
 
     .footer {
@@ -892,7 +924,7 @@ body {
     .product {
         &__stand {
             max-width: 500px;
-            bottom: 160px;
+            bottom: 100px;
         }
     }
 
@@ -902,7 +934,6 @@ body {
         }
     }
 } 
-
 
 @media (min-width: 1920px) {
     .title {
@@ -918,7 +949,7 @@ body {
 
         &__stand {
             max-width: none;
-            bottom: 140px;
+            bottom: 70px;
         }
     }
 
@@ -945,6 +976,335 @@ body {
     .faq {
         &__title {
             font-size: 72px;
+        }
+    }
+}
+
+@media (min-width: 1350px) and (max-width: 1440px) {
+    .faq__bottom-item {
+        max-width: 700px;
+    }
+
+    .faq__letter {
+        top: 130px;
+    }
+
+    .product__stand {
+        max-width: 380px;
+        right: 35px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .container {
+        padding: 0 60px;
+    }
+
+    .title {
+        line-height: 128%;
+        font-size: 36px;
+    }
+
+    .product {
+        height: calc(100vh - 187px);
+
+        &__button {
+            padding: 10px 25px;
+        }
+
+        &__title {
+            max-width: 600px;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        &__menu {
+            margin-bottom: 18px;
+            margin-top: -15px;
+
+            &-item {
+                & svg {
+                    width: 18px;
+                    height: auto;
+                }
+            }
+
+            &-text {
+                font-size: 14px;
+            }
+        }
+
+        &__left img {
+            margin-top: 75px;
+            max-width: 65px;
+        }
+
+        &__stand {
+            bottom: 75px;
+            right: 50px;
+            max-width: 290px;
+        }
+    }
+
+    .button {
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+    .header {
+        &__row {
+            gap: 10px;
+        }
+
+        &__menu {
+            &-text {
+                font-size: 14px;
+            }
+        }
+
+        &__middle {
+            margin-top: 9px;
+            gap: 10px;
+
+            &-line {
+                & img {
+                    max-width: 484px;
+                }
+            }
+        }
+
+        &__address {
+            font-size: 14px;
+        }
+
+        &__number {
+            margin-top: 9px;
+
+            & a {
+                font-size: 14px;
+            }
+        }
+
+        &__logo {
+            margin-right: 70px;
+
+            & a img {
+                max-width: 54px;
+            }
+        }
+
+        &__button {
+            & a:nth-child(1) {
+                & svg {
+                    width: 31px;
+                    height: auto;
+                }
+            }
+
+            & a:nth-child(2) {
+                & svg {
+                    width: 24px;
+                    height: auto;
+                }
+            }
+
+            & a:nth-child(3) {
+                & svg {
+                    width: 28px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .service {
+        margin-bottom: 40px;
+
+        &__subtitle {
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        &__line {
+            margin: 5px 25px;
+        }
+
+        &__box {
+            &-item {
+                width: calc(25% - 12px);
+                height: 200px;
+                padding: 15px;
+                margin-bottom: 10px;
+                margin-right: 15px;
+            }
+
+            &-text {
+                font-size: 12px;
+            }
+
+            &-button {
+                padding: 8px 20px;
+
+                & span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .about {
+        &__row {
+            padding-top: 15px;
+            padding-bottom: 180px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__right {
+            &-img {
+                max-width: 395px;
+            }
+
+            &-fon {
+                bottom: 65px;
+                width: 453px;
+                height: auto;
+            }
+        }
+
+        &__line {
+            max-width: 500px;
+            margin-bottom: 25px;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+    .portfolio {
+        &__row {
+            padding-top: 90px;
+        }
+
+        &__container {
+            padding: 0;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+            margin-left: 110px;
+            font-size: 36px;
+        }
+
+        &__box {
+            &-item {
+                height: 478px;
+            }
+        }
+    }
+
+    .faq {
+        &__title {
+            font-size: 36px;
+        }
+
+        &__subtitle {
+            margin: 15px 0 30px 0;
+        }
+
+        &__line {
+            & svg {
+                width: 643px;
+            }
+        }
+
+        &__bottom-question span {
+            font-size: 14px;
+        }
+
+        &__bottom-question {
+            padding: 20px 25px 15px 0;
+
+            &-svg {
+                width: 24px;
+                height: auto;
+            }
+        }
+
+        &__bottom-answer {
+            font-size: 14px;
+        }
+
+        &__bottom-item {
+            max-width: 654px;
+        }
+
+        &__letter {
+            top: 130px;
+            right: 70px;
+            max-width: 150px;
+        }
+    }
+
+    .footer {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &__left {
+            margin-right: 40px;
+            gap: 5px;
+        }
+
+        &__middle {
+            margin-right: 40px;
+            gap: 5px;
+        }
+
+        &__right {
+            gap: 5px;
+        }
+
+        &__button {
+            margin-top: 0;
+        }
+    }
+
+    .advertising {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1250px) and (max-width:1350px) {
+    .product {
+        &__stand {
+            max-width: 330px;
+            bottom: 75px;
+            right: 70px;
+        }
+    }
+
+    .faq {
+        &__letter {
+            right: 140px;
+            max-width: 180px;
         }
     }
 }
