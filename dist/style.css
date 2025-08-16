@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -56,7 +57,6 @@ body {
   max-width: 100%;
   padding: 0 90px;
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .row {
@@ -128,6 +128,9 @@ body {
 .header {
   margin: 30px 0;
 }
+.header__burger {
+  display: none;
+}
 .header__row {
   flex-direction: column;
   gap: 20px;
@@ -157,6 +160,9 @@ body {
 .header__logo {
   margin-right: 85px;
   flex-shrink: 0;
+}
+.header__logo-white {
+  display: none;
 }
 .header__logo a img {
   max-width: 75px;
@@ -608,6 +614,14 @@ body {
   color: #171515;
 }
 
+.productM {
+  display: none;
+}
+
+.aboutM {
+  display: none;
+}
+
 @media (min-width: 1550px) {
   .product__stand {
     max-width: 450px;
@@ -1035,5 +1049,196 @@ body {
   .faq__letter {
     right: 140px;
     max-width: 180px;
+  }
+}
+@media (max-width: 1023px) {
+  .header {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 40px;
+    width: 100%;
+    margin: 0;
+    z-index: 100;
+    box-sizing: border-box;
+  }
+  .header__row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .header__burger {
+    display: flex;
+    border-radius: 15px;
+  }
+  .header .container {
+    padding: 0;
+  }
+  .header__logo {
+    margin-right: 0;
+  }
+  .header__logo a img {
+    max-width: 65px;
+  }
+  .header__logo-black {
+    display: none;
+  }
+  .header__logo-white {
+    display: block;
+  }
+  .header__address {
+    display: none;
+  }
+  .header__top {
+    display: none;
+  }
+  .header__middle {
+    display: none;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__number {
+    display: none;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 107%;
+    color: #fff;
+  }
+  .product {
+    display: none;
+  }
+  .service {
+    display: none;
+  }
+  .print {
+    display: none;
+  }
+  .about {
+    display: none;
+  }
+  .portfolio {
+    display: none;
+  }
+  .faq {
+    display: none;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .productM {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+  .productM__line {
+    position: absolute;
+    top: 134px;
+    right: 75px;
+    z-index: 110;
+  }
+  .productM__row {
+    position: relative;
+    z-index: 10;
+    padding-top: 280px;
+    flex-direction: column;
+  }
+  .productM__title {
+    margin-bottom: 45px;
+    max-width: 523px;
+  }
+  .productM__fon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  .productM__subtitle {
+    display: flex;
+    gap: 12px;
+  }
+  .productM__subtitle h3 {
+    font-weight: 500;
+    font-size: 31px;
+    color: #fff;
+  }
+  .aboutM {
+    margin-top: -80px;
+    display: flex;
+    position: relative;
+    padding-bottom: 300px;
+  }
+  .aboutM__row {
+    padding-top: 100px;
+    z-index: 1;
+    flex-direction: column;
+  }
+  .aboutM__title {
+    max-width: 640px;
+    margin-left: 16px;
+  }
+  .aboutM__svg-mask img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* чтобы картинка покрывала контейнер */
+    -webkit-mask-image: url("../image/aboutM__svg.svg"); /* маска по SVG */
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+    mask-image: url("../image/aboutM__svg.svg"); /* для Firefox */
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
+  }
+  .aboutM__subtitle {
+    position: relative;
+    padding: 107px 47px 30px 16px;
+    margin-top: -30px;
+    box-sizing: border-box;
+  }
+  .aboutM__subtitle h3 {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 151%;
+    color: #16192f;
+    z-index: 1;
+    position: relative;
+  }
+  .aboutM__subtitle svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .aboutM__gallery {
+    display: flex;
+  }
+  .aboutM__gallery img {
+    position: absolute;
+    width: auto;
+  }
+  .aboutM__gallery img:nth-child(1) {
+    bottom: 82.7px;
+    left: 31.5px;
+  }
+  .aboutM__gallery img:nth-child(2) {
+    bottom: -2px;
+    left: 210px;
+  }
+  .aboutM__gallery img:nth-child(3) {
+    right: 212px;
+    bottom: 82.7px;
+  }
+  .aboutM__gallery img:nth-child(4) {
+    bottom: -2px;
+    right: 31.5px;
   }
 }

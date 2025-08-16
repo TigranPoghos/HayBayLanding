@@ -56,7 +56,6 @@ body {
     max-width: 100%;
     padding: 0 90px;
     box-sizing: border-box;
-    margin: 0 auto;
 }
 
 .row {
@@ -107,6 +106,10 @@ body {
 .header {
     margin: 30px 0;
 
+    &__burger {
+        display: none;
+    }
+
     &__row {
         flex-direction: column;
         gap: 20px;
@@ -141,6 +144,10 @@ body {
     &__logo {
         margin-right: 85px;
         flex-shrink: 0;
+        
+        &-white {
+            display: none;
+        }
 
         & a img {
             max-width: 75px;
@@ -674,6 +681,14 @@ body {
     font-weight: 700;
     font-size: 16px;
     color: #171515;
+}
+
+.productM {
+    display: none;
+}
+
+.aboutM {
+    display: none;
 }
 
 @media (min-width: 1550px) {
@@ -1305,6 +1320,240 @@ body {
         &__letter {
             right: 140px;
             max-width: 180px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .header {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 40px;
+        width: 100%;
+        margin: 0;
+        z-index: 100;
+        box-sizing: border-box;
+
+        &__row {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+
+        &__burger {
+            display: flex;
+            border-radius: 15px;
+        }
+
+        & .container {
+            padding: 0;
+        }
+
+        &__logo {
+            margin-right: 0;
+
+            & a img {
+                max-width: 65px;
+            }
+
+            &-black {
+                display: none;
+            }
+
+            &-white {
+                display: block;
+            }
+        }
+
+        &__address {
+            display: none;
+        }
+
+        &__top {
+            display: none;
+        }
+
+        &__middle {
+            display: none;
+        }
+
+        &__button {
+            display: none;
+        }
+
+        &__number {
+            display: none;
+        }
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 107%;
+        color: #fff;
+    }
+
+    .product {
+        display: none;
+    }
+
+    .service {
+        display: none;
+    }
+
+    .print {
+        display: none;
+    }
+
+    .about {
+        display: none;
+    }
+
+    .portfolio {
+        display: none;
+    }
+
+    .faq {
+        display: none;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+
+    .productM {
+        display: flex;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+
+        &__line {
+            position: absolute;
+            top: 134px;
+            right: 75px;
+            z-index: 110;
+        }
+
+        &__row {
+            position: relative;
+            z-index: 10;
+            padding-top: 280px;
+            flex-direction: column;
+        }
+
+        &__title {
+            margin-bottom: 45px;
+            max-width: 523px;
+        }
+
+        &__fon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        &__subtitle {
+            display: flex;
+            gap: 12px;
+
+            & h3 {
+                font-weight: 500;
+                font-size: 31px;
+                color: #fff;
+            }
+        }
+    }
+
+    .aboutM {
+        margin-top: -80px;
+        display: flex;
+        position: relative;
+        padding-bottom: 300px;
+
+        &__row {
+            padding-top: 100px;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        &__title {
+            max-width: 640px;
+            margin-left: 16px;
+        }
+
+        &__svg-mask img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* чтобы картинка покрывала контейнер */
+            
+            -webkit-mask-image: url('../image/aboutM__svg.svg'); /* маска по SVG */
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            -webkit-mask-position: center;
+            
+            mask-image: url('../image/aboutM__svg.svg'); /* для Firefox */
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            mask-position: center;
+        }
+
+        &__subtitle {
+            position: relative;
+            padding: 107px 47px 30px 16px;
+            margin-top: -30px;
+            box-sizing: border-box;
+
+            & h3 {
+                font-weight: 400;
+                font-size: 26px;
+                line-height: 151%;
+                color: #16192f;
+                z-index: 1;
+                position: relative;
+            }
+
+            & svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__gallery {
+            display: flex;
+
+            & img {
+                position: absolute;
+                width: auto;
+
+                &:nth-child(1) {
+                    bottom: 82.7px;
+                    left: 31.5px;
+                }
+
+                &:nth-child(2) {
+                    bottom: -2px;
+                    left: 210px;
+                }
+
+                &:nth-child(3) {
+                    right: 212px;
+                    bottom: 82.7px;
+                }
+
+                &:nth-child(4) {
+                    bottom: -2px;
+                    right: 31.5px;
+                }
+            }
         }
     }
 }
