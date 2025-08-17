@@ -53,7 +53,7 @@ body {
 }
 
 .container {
-    max-width: 100%;
+    width: 100%;
     padding: 0 90px;
     box-sizing: border-box;
 }
@@ -636,6 +636,10 @@ body {
         color: #171515;
         opacity: .8;
         max-width: 215px;
+
+        &M {
+            display: none;
+        }
     }
 
     &__title {
@@ -668,6 +672,10 @@ body {
     &__button {
         margin-top: 5px;
 
+        &M {
+            display: none;
+        }
+
         & a:nth-child(1) {
             display: none;
         }
@@ -697,6 +705,10 @@ body {
 
 .faqM {
     display: none;
+
+    &__letter {
+        display: none;
+    }
 }
 
 @media (min-width: 1550px) {
@@ -1388,12 +1400,16 @@ body {
             display: none;
         }
 
-        &__button {
+        &__number {
             display: none;
         }
 
-        &__number {
+        &__button-item {
             display: none;
+        }
+
+        &__button a:hover {
+            animation: none;
         }
     }
 
@@ -1595,7 +1611,7 @@ body {
         border-radius: 59px;
         display: flex;
         box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.4);
-        padding: 40px;
+        padding: 40px 0;
         box-sizing: border-box;
         position: relative;
         z-index: 2;
@@ -1648,6 +1664,57 @@ body {
                 max-width: none;
                 border: none;
                 margin-bottom: 20px;
+            }
+        }
+    }
+
+    .footer {
+        padding-bottom: 0;
+
+        &__title {
+            font-weight: 600;
+            font-size: 46px;
+            line-height: 107%;
+            color: #16192f;
+        }
+
+        &__text {
+            font-weight: 300;
+            font-size: 22px;
+            color: #16192f;
+            opacity: .8;
+            max-width: none;
+
+            &M {
+                display: flex;
+            }
+        }
+
+        &__row {
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+
+        &__left {
+            margin-right: 0;
+        }
+
+        &__middle {
+            display: none;
+        }
+
+        &__button {
+            gap: 30px;
+            margin: auto 0 0 0;
+
+            &M {
+                display: block;
+            }
+        }
+
+        &__right {
+            & .footer__title {
+                display: none;
             }
         }
     }
