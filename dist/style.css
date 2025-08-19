@@ -720,15 +720,40 @@ main.active .serviceM .productM__text {
 main.active .itemsM {
   display: flex;
 }
+main.active .itemsM__change {
+  display: flex;
+  justify-content: end;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+main.active .itemsM__change button {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 131%;
+  color: #EEE8DF;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 1px solid #EEE8DF;
+}
+main.active .itemsM__change button.active {
+  background-color: #EEE8DF;
+  color: #16192F;
+}
 main.active .itemsM__row {
   width: 100%;
   flex-direction: column;
 }
 main.active .itemsM__block {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   height: 200px;
+}
+main.active .itemsM__block.active {
+  display: flex;
 }
 main.active .itemsM__block h1 {
   color: #16192F;
@@ -1179,6 +1204,148 @@ main.active .itemsM__block-img {
     max-width: 180px;
   }
 }
+@media (max-width: 1024px) {
+  .title {
+    font-size: 30px;
+  }
+  .header__row {
+    padding: 0 30px;
+  }
+  .header__middle-line {
+    max-width: 450px;
+  }
+  .header__logo {
+    margin-right: 30px;
+  }
+  .header__address {
+    font-size: 12px;
+  }
+  .header__number a {
+    font-size: 12px;
+  }
+  .header__menu-text {
+    font-size: 12px;
+  }
+  .header__button a:nth-child(1) svg {
+    width: 24px;
+  }
+  .header__button a:nth-child(2) svg {
+    width: 20px;
+  }
+  .header__button a:nth-child(3) svg {
+    width: 24px;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .product {
+    height: calc(100vh - 180px);
+    padding-top: 60px;
+  }
+  .product__left img {
+    max-width: 55px;
+  }
+  .product__stand {
+    right: 20px;
+    bottom: 100px;
+    max-width: 250px;
+  }
+  .product__row {
+    padding: 0 30px;
+  }
+  .product__title {
+    max-width: 500px;
+  }
+  .product__menu-text {
+    font-size: 12px;
+  }
+  .product__subtitle {
+    font-size: 12px;
+  }
+  .button__text {
+    font-size: 12px;
+  }
+  .service__subtitle {
+    font-size: 12px;
+  }
+  .service__box-text {
+    font-size: 10px;
+  }
+  .service__box-button span {
+    font-size: 10px;
+  }
+  .about__title {
+    margin-left: 30px;
+    font-size: 30px;
+  }
+  .about__subtitle {
+    font-size: 12px;
+    margin-left: 30px;
+  }
+  .about__text {
+    font-size: 12px;
+    margin-left: 30px;
+    max-width: 350px;
+  }
+  .about__line {
+    max-width: 400px;
+    margin-left: 30px;
+  }
+  .about__right-fon {
+    bottom: 51px;
+    width: 323px;
+  }
+  .about__right-img {
+    max-width: 300px;
+  }
+  .portfolio__container {
+    padding: 0;
+  }
+  .portfolio__row {
+    padding-top: 60px;
+  }
+  .portfolio__box-item {
+    height: 400px;
+  }
+  .portfolio__title {
+    margin-left: 60px;
+    font-size: 30px;
+  }
+  .faq__row {
+    padding: 40px 30px 60px 30px;
+  }
+  .faq__title {
+    font-size: 30px;
+  }
+  .faq__subtitle {
+    margin: 15px 0;
+    font-size: 12px;
+  }
+  .faq__bottom-answer {
+    font-size: 12px;
+  }
+  .faq__bottom-answer.active {
+    padding: 0 20px 10px 0;
+  }
+  .faq__bottom-question {
+    padding: 15px 20px 15px 0;
+  }
+  .faq__bottom-question span {
+    font-size: 12px;
+  }
+  .faq__bottom-item {
+    max-width: 450px;
+  }
+  .footer {
+    padding-bottom: 50px;
+  }
+  .footer__title {
+    font-size: 16px;
+  }
+  .footer__text {
+    font-size: 12px;
+  }
+}
 @media (max-width: 768px) {
   .header {
     position: absolute;
@@ -1568,6 +1735,9 @@ main.active .itemsM__block-img {
   .main.active .itemsM__block .productM__title-active {
     font-size: 30px;
   }
+  .main.active .itemsM__change button {
+    font-size: 26px;
+  }
   .faq__bottom-question span {
     font-size: 26px;
   }
@@ -1608,6 +1778,9 @@ main.active .itemsM__block-img {
   }
   .main.active .itemsM__block .productM__title-active {
     font-size: 26px;
+  }
+  .main.active .itemsM__change button {
+    font-size: 23px;
   }
   .aboutM__gallery {
     margin-top: 10px;
@@ -1706,6 +1879,12 @@ main.active .itemsM__block-img {
   }
   .main.active .itemsM__block {
     height: 100px;
+  }
+  .main.active .itemsM__block .productM__title-active {
+    font-size: 20px;
+  }
+  .main.active .itemsM__change button {
+    font-size: 16px;
   }
   .aboutM {
     border-radius: 0 0 30px 30px;

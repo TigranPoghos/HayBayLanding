@@ -371,7 +371,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });    
 
-
+    function scrollToTopInstant() {
+        window.scrollTo(0, 0);
+    }
 
 
 
@@ -440,6 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     headerService.addEventListener('click', () => {
         main.classList.add('active')
+        scrollToTopInstant();
         burger__jsBody.classList.remove('active');
         header.classList.remove('active')
         opacity.classList.remove('active')
@@ -448,6 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     logo.addEventListener('click', () => {
         main.classList.remove('active')
+        scrollToTopInstant();
         burger__jsBody.classList.remove('active');
         header.classList.remove('active')
         opacity.classList.remove('active')
@@ -458,42 +462,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const menuButtons = document.querySelectorAll('.header__burger-item');
+    const menuButtons = document.querySelectorAll('.header__burger-item');
 
-const sectionsM = {
-  aboutM: document.querySelector('.aboutM__title'),
-  faqM: document.querySelector('.faqM'),
-  contactsM: document.querySelector('.footerM')
-};
+    const sectionsM = {
+    aboutM: document.querySelector('.aboutM__title'),
+    faqM: document.querySelector('.faqM'),
+    contactsM: document.querySelector('.footerM')
+    };
 
-menuButtons.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const target = btn.dataset.section;
-    const sectionM = sectionsM[target];
+    menuButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.section;
+            const sectionM = sectionsM[target];
 
-    if (!sectionM) return; // если вдруг нет секции
+            if (!sectionM) return;
 
-    // Закрываем бургер
-    burger__jsBody.classList.remove('active');
-    header.classList.remove('active');
-    opacity.classList.remove('active');
-    gsap.to(burger__js, { rotate: '0deg', duration: 1 });
+            burger__jsBody.classList.remove('active');
+            header.classList.remove('active');
+            opacity.classList.remove('active');
+            gsap.to(burger__js, { rotate: '0deg', duration: 1 });
 
-    // Проверяем состояние main
-    if (main.classList.contains('active')) {
-      main.classList.remove('active');
-      setTimeout(() => {
-        sectionM.scrollIntoView({ behavior: 'smooth' });
-      }, 50);
-    } else {
-      sectionM.scrollIntoView({ behavior: 'smooth' });
+            if (main.classList.contains('active')) {
+            main.classList.remove('active');
+            scrollToTopInstant();
+            setTimeout(() => {
+                sectionM.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
+            } else {
+            sectionM.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+
+
+    
+    
+    const firstBtn = document.getElementById('firstBtn');
+    const secondBtn = document.getElementById('secondBtn');
+    const allBlocks = document.querySelectorAll('.itemsM__block');
+
+    function switchTabs(activeTab) {
+        localStorage.setItem('activeTab', activeTab);
+        
+        firstBtn.classList.toggle('active', activeTab === 'first');
+        secondBtn.classList.toggle('active', activeTab === 'second');
+        
+        allBlocks.forEach(block => {
+            const isVisible = block.id === activeTab;
+            block.classList.toggle('active', isVisible);
+        });
     }
-  });
-});
+
+    const savedTab = localStorage.getItem('activeTab') || 'first';
+    switchTabs(savedTab);
+
+    firstBtn.addEventListener('click', () => switchTabs('first'));
+    secondBtn.addEventListener('click', () => switchTabs('second'));
 
 
 
-
+    
 
 
 })

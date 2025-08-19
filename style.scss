@@ -813,6 +813,31 @@ main.active {
     .itemsM {
         display: flex;
 
+        &__change {
+            display: flex;
+            justify-content: end;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            gap: 10px;
+
+            & button {
+                box-sizing: border-box;
+                padding: 10px 20px;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 131%;
+                color: #EEE8DF;
+                background-color: transparent;
+                border-radius: 50px;
+                border: 1px solid #EEE8DF;
+
+                &.active {
+                    background-color: #EEE8DF;
+                    color: #16192F;
+                }
+            }
+        }
+
         &__row {
             width: 100%;
             flex-direction: column;
@@ -820,9 +845,13 @@ main.active {
 
         &__block {
             width: 100%;
-            display: flex;
+            display: none;
             justify-content: space-between;
             height: 200px;
+
+            &.active {
+                display: flex;
+            }
 
             & h1 {
                 color: #16192F;
@@ -1482,6 +1511,221 @@ main.active {
     }
 }
 
+@media (max-width: 1024px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .header {
+        &__row {
+            padding: 0 30px;
+        }
+
+        &__middle {
+            &-line {
+                max-width: 450px;
+            }
+        }
+
+        &__logo {
+            margin-right: 30px;
+        }
+
+        &__address {
+            font-size: 12px;
+        }
+
+        &__number a {
+            font-size: 12px;
+        }
+
+        &__menu {
+            &-text {
+                font-size: 12px;
+            }
+        }
+
+        &__button {
+            & a:nth-child(1) svg {
+                width: 24px;
+            }
+
+            & a:nth-child(2) svg {
+                width: 20px;
+            }
+
+            & a:nth-child(3) svg {
+                width: 24px;
+            }
+        }
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+
+    .product {
+        height: calc(100vh - 180px);
+        padding-top: 60px;
+
+        &__left {
+            & img {
+                max-width: 55px;
+            }
+        }
+
+        &__stand {
+            right: 20px;
+            bottom: 100px;
+            max-width: 250px;
+        }
+
+        &__row {
+            padding: 0 30px;
+        }
+
+        &__title {
+            max-width: 500px;
+        }
+
+        &__menu {
+            &-text {
+                font-size: 12px;
+            }
+        }
+
+        &__subtitle {
+            font-size: 12px;
+        }
+    }
+
+    .button__text {
+        font-size: 12px;
+    }
+
+    .service {
+        &__subtitle {
+            font-size: 12px;
+        }
+
+        &__box {
+            &-text {
+                font-size: 10px;
+            }
+
+            &-button {
+                & span {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .about {
+        &__title {
+            margin-left: 30px;
+            font-size: 30px;
+        }
+
+        &__subtitle {
+            font-size: 12px;
+            margin-left: 30px;
+        }
+
+        &__text {
+            font-size: 12px;
+            margin-left: 30px;         
+            max-width: 350px;   
+        }
+
+        &__line {
+            max-width: 400px;
+            margin-left: 30px;
+        }
+
+        &__right {
+            &-fon {
+                bottom: 51px;
+                width: 323px;
+            }
+
+            &-img {
+                max-width: 300px;
+            }
+        }
+    }
+
+    .portfolio {
+        &__container {
+            padding: 0;
+        }
+
+        &__row {
+            padding-top: 60px;
+        }
+
+        &__box {
+            &-item {
+                height: 400px;
+            }
+        }
+
+        &__title {
+            margin-left: 60px;
+            font-size: 30px;
+        }
+    }
+
+    .faq {
+        &__row {
+            padding: 40px 30px 60px 30px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__subtitle {
+            margin: 15px 0;
+            font-size: 12px;
+        }
+
+        &__bottom {
+            &-answer {
+                font-size: 12px;
+
+                &.active {
+                    padding: 0 20px 10px 0;
+                }
+            }
+
+            &-question {
+                padding: 15px 20px 15px 0;
+
+                & span {
+                    font-size: 12px;
+                }
+            }
+
+            &-item {
+                max-width: 450px;
+            }
+        }
+    }
+
+    .footer {
+        padding-bottom: 50px;
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 12px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         position: absolute;
@@ -1985,6 +2229,12 @@ main.active {
                     font-size: 30px;
                 }
             }
+
+            &__change {
+                & button {
+                    font-size: 26px
+                }
+            }
         }
     }
 
@@ -2046,6 +2296,12 @@ main.active {
 
                 & .productM__title-active {
                     font-size: 26px;
+                }
+            }
+
+            &__change {
+                & button {
+                    font-size: 23px
                 }
             }
         }
@@ -2204,6 +2460,16 @@ main.active {
         & .itemsM {
             &__block {
                 height: 100px;
+
+                & .productM__title-active {
+                    font-size: 20px;
+                }
+            }
+
+            &__change {
+                & button {
+                    font-size: 16px
+                }
             }
         }
     }
