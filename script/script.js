@@ -407,6 +407,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+    const burger__js = document.querySelector('.header__burger');
+    const burger__jsBody = document.querySelector('.header__burger-body');
+    const header = document.querySelector('.header');
+    const opacity = document.querySelector('.header__burger-opacity')
+    const logo = document.querySelector('.header__logo')
+
+    burger__js.addEventListener('click', () => {
+        burger__jsBody.classList.toggle('active');
+        header.classList.toggle('active')
+        opacity.classList.toggle('active')
+
+        if (burger__jsBody.classList.contains('active')) {
+            gsap.to(burger__js, { rotate: '90deg', duration: 1 });
+        } else {
+            gsap.to(burger__js, { rotate: '0deg', duration: 1 });
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        // если клик НЕ внутри меню и НЕ внутри хедера
+        if (!burger__jsBody.contains(e.target) && !header.contains(e.target)) {
+            burger__jsBody.classList.remove('active');
+            header.classList.remove('active')
+            opacity.classList.remove('active')
+            gsap.to(burger__js, { rotate: '0deg', duration: 1 });
+        }
+    });
+
+    const headerService = document.querySelector('.headerService')
+    const main = document.querySelector('.main') 
+
+    headerService.addEventListener('click', () => {
+        main.classList.add('active')
+        burger__jsBody.classList.remove('active');
+        header.classList.remove('active')
+        opacity.classList.remove('active')
+        gsap.to(burger__js, { rotate: '0deg', duration: 1 });
+    })
+
+    logo.addEventListener('click', () => {
+        main.classList.remove('active')
+        burger__jsBody.classList.remove('active');
+        header.classList.remove('active')
+        opacity.classList.remove('active')
+        gsap.to(burger__js, { rotate: '0deg', duration: 1 });
+    })
+
+
+
+
+
+const menuButtons = document.querySelectorAll('.header__burger-item');
+
+const sectionsM = {
+  aboutM: document.querySelector('.aboutM__title'),
+  faqM: document.querySelector('.faqM'),
+  contactsM: document.querySelector('.footerM')
+};
+
+menuButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.section;
+    const sectionM = sectionsM[target];
+
+    if (!sectionM) return; // если вдруг нет секции
+
+    // Закрываем бургер
+    burger__jsBody.classList.remove('active');
+    header.classList.remove('active');
+    opacity.classList.remove('active');
+    gsap.to(burger__js, { rotate: '0deg', duration: 1 });
+
+    // Проверяем состояние main
+    if (main.classList.contains('active')) {
+      main.classList.remove('active');
+      setTimeout(() => {
+        sectionM.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    } else {
+      sectionM.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+
+
+
 
 
 })
