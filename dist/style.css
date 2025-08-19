@@ -1454,6 +1454,9 @@ main.active .itemsM__block-img {
   .header__button a:hover {
     animation: none;
   }
+  .main__fon {
+    display: none;
+  }
   .title {
     font-weight: 600;
     font-size: 46px;

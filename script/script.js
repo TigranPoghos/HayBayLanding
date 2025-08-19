@@ -290,16 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
             scrub: false,
         }
     })
-
-    gsap.to('.footer__container', {
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: '.footer',
-            start: '100% bottom',
-            scrub: false
-        }
-    })
     
 
 
@@ -522,7 +512,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    
+
 
 
 })
