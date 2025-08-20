@@ -46,7 +46,6 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
     background-color: #EEE8DF;
     font-family: 'Manrope';
     position: relative;
@@ -212,32 +211,8 @@ body {
     }
 }
 
-.main__fon {
-    background-color: #16192F;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    position: fixed;
-    opacity: 1;
-    top: 0;
-    left: 0;
-}
-
 .arrow {
-      clip-path: inset(0 0 100% 0);
-}
-
-.titleGsap {
-    z-index: 1000;
-    color: rgba($color: #EEE8DF, $alpha: 0.4);
-    position: absolute;
-    left: 50px;
-    bottom: 50px;
-    display: inline-block;
-    background: linear-gradient(90deg, #EEE8DF 0%, #EEE8DF 0%) no-repeat;
-    background-size: 0% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
+    clip-path: inset(0 0 100% 0);
 }
 
 .product {
@@ -267,6 +242,7 @@ body {
 
     &__title {
         max-width: 700px;
+        margin-bottom: 35px;
     }
 
     &__menu {
@@ -636,10 +612,6 @@ body {
 
     &__row {
         padding: 0 50px;
-    }
-
-    &__container {
-        transform: translateY(200%);
     }
 
     &__text {
@@ -1914,6 +1886,8 @@ main.active {
             top: 134px;
             right: 75px;
             z-index: 110;
+            clip-path: inset(0 0 100% 0);
+            height: auto;
         }
 
         &__row {
@@ -1988,12 +1962,25 @@ main.active {
             display: flex;
             padding: 0 15px;
             box-sizing: border-box;
-            gap: 5px;
-            align-items: flex-start;
             margin-top: 50px;
+            gap: 10px;
 
-            & img {
-                width: calc(25% - 4px);
+            &-left {
+                gap: 5px;
+                display: flex;
+            }
+
+            &-right {
+                display: flex;
+                gap: 5px;
+            }
+
+            &-left img {
+                width: 50%;
+            }
+
+            &-right img {
+                width: 50%;
             }
         }
     }
@@ -2251,6 +2238,7 @@ main.active {
     .productM {
         &__line {
             max-width: 330px;
+            top: 167px;
         }
 
         &__title {
@@ -2411,7 +2399,7 @@ main.active {
 
         &__line {
             max-width: 224px;
-            top: 5px;
+            top: 80px;
             right: 38px;
         }
 

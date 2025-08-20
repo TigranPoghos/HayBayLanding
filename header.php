@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HayBay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/style.css">
+    
+    <?php wp_head(); ?>
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="header__row row">
+                <div class="header__top">
+                    <div class="header__address">г.Москва, р-н Октябрьский, ул Мирная д.в 26</div>
+                    <div class="header__button">
+                        <a href="mailto:example@mail.ru" class="header__button-item">
+                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M35 7H7C5.075 7 3.5 8.575 3.5 10.5V31.5C3.5 33.425 5.075 35 7 35H35C36.925 35 38.5 33.425 38.5 31.5V10.5C38.5 8.575 36.925 7 35 7ZM34.3 14.4375L22.855 21.595C21.7175 22.3125 20.2825 22.3125 19.145 21.595L7.7 14.4375C7.52452 14.339 7.37086 14.2059 7.24831 14.0463C7.12575 13.8867 7.03686 13.7039 6.98701 13.5089C6.93716 13.3139 6.92738 13.1109 6.95827 12.912C6.98917 12.7132 7.06009 12.5227 7.16674 12.352C7.2734 12.1814 7.41357 12.0341 7.57877 11.9192C7.74397 11.8043 7.93077 11.7241 8.12787 11.6835C8.32496 11.6429 8.52825 11.6427 8.72542 11.6829C8.9226 11.7231 9.10956 11.8029 9.275 11.9175L21 19.25L32.725 11.9175C32.8904 11.8029 33.0774 11.7231 33.2746 11.6829C33.4718 11.6427 33.675 11.6429 33.8721 11.6835C34.0692 11.7241 34.256 11.8043 34.4212 11.9192C34.5864 12.0341 34.7266 12.1814 34.8333 12.352C34.9399 12.5227 35.0108 12.7132 35.0417 12.912C35.0726 13.1109 35.0628 13.3139 35.013 13.5089C34.9631 13.7039 34.8743 13.8867 34.7517 14.0463C34.6291 14.2059 34.4755 14.339 34.3 14.4375Z" fill="#16192F" />
+                            </svg>
+                        </a>
+                        <a href="#" class="header__button-item">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 0C7.168 0 0 7.168 0 16C0 24.832 7.168 32 16 32C24.832 32 32 24.832 32 16C32 7.168 24.832 0 16 0ZM23.424 10.88C23.184 13.408 22.144 19.552 21.616 22.384C21.392 23.584 20.944 23.984 20.528 24.032C19.6 24.112 18.896 23.424 18 22.832C16.592 21.904 15.792 21.328 14.432 20.432C12.848 19.392 13.872 18.816 14.784 17.888C15.024 17.648 19.12 13.92 19.2 13.584C19.2111 13.5331 19.2096 13.4803 19.1957 13.4301C19.1818 13.3799 19.1558 13.3339 19.12 13.296C19.024 13.216 18.896 13.248 18.784 13.264C18.64 13.296 16.4 14.784 12.032 17.728C11.392 18.16 10.816 18.384 10.304 18.368C9.728 18.352 8.64 18.048 7.824 17.776C6.816 17.456 6.032 17.28 6.096 16.72C6.128 16.432 6.528 16.144 7.28 15.84C11.952 13.808 15.056 12.464 16.608 11.824C21.056 9.968 21.968 9.648 22.576 9.648C22.704 9.648 23.008 9.68 23.2 9.84C23.36 9.968 23.408 10.144 23.424 10.272C23.408 10.368 23.44 10.656 23.424 10.88Z" fill="#16192F" />
+                            </svg>
+                        </a>
+                        <a href="#" class="header__button-item">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.0016 3.16666C27.7463 3.16666 34.8349 10.2552 34.8349 19C34.8349 27.7447 27.7463 34.8333 19.0016 34.8333C16.2034 34.8382 13.4545 34.0976 11.0374 32.6879L3.17457 34.8333L5.31524 26.9673C3.90442 24.5495 3.16333 21.7994 3.16824 19C3.16824 10.2552 10.2568 3.16666 19.0016 3.16666ZM13.6056 11.5583L13.2889 11.571C13.0842 11.5851 12.8841 11.6389 12.6999 11.7293C12.5282 11.8267 12.3715 11.9483 12.2344 12.0903C12.0444 12.2692 11.9367 12.4244 11.8212 12.5748C11.2355 13.3363 10.9202 14.2711 10.925 15.2317C10.9282 16.0075 11.1308 16.7627 11.4475 17.4689C12.0951 18.8971 13.1607 20.4092 14.5667 21.8104C14.9055 22.1477 15.238 22.4865 15.5958 22.8016C17.3429 24.3396 19.4248 25.4489 21.6758 26.0411L22.5752 26.1788C22.8681 26.1947 23.161 26.1725 23.4555 26.1582C23.9165 26.1339 24.3667 26.0091 24.7744 25.7925C24.9816 25.6854 25.1839 25.5692 25.3808 25.4442C25.3808 25.4442 25.4479 25.3988 25.5787 25.3017C25.7925 25.1433 25.9239 25.0309 26.1012 24.8457C26.2342 24.7084 26.3451 24.5491 26.4337 24.3675C26.5572 24.1094 26.6807 23.617 26.7314 23.2069C26.7694 22.8934 26.7583 22.7224 26.7536 22.6163C26.7472 22.4469 26.6063 22.2712 26.4527 22.1967L25.5312 21.7835C25.5312 21.7835 24.1537 21.1834 23.3114 20.8002C23.2232 20.7619 23.1288 20.7399 23.0327 20.7353C22.9244 20.724 22.8149 20.7361 22.7116 20.7708C22.6084 20.8055 22.5138 20.862 22.4342 20.9364C22.4263 20.9332 22.3202 21.0235 21.1755 22.4105C21.1098 22.4988 21.0193 22.5655 20.9155 22.6022C20.8117 22.6388 20.6994 22.6438 20.5928 22.6163C20.4896 22.5888 20.3886 22.5539 20.2904 22.5118C20.0941 22.4295 20.026 22.3978 19.8914 22.3408C18.9824 21.9449 18.1409 21.409 17.3977 20.7527C17.1982 20.5786 17.0129 20.3886 16.8229 20.2049C16.2 19.6083 15.6572 18.9335 15.2079 18.1972L15.1145 18.0468C15.0484 17.9452 14.9942 17.8363 14.953 17.7222C14.8928 17.4895 15.0496 17.3027 15.0496 17.3027C15.0496 17.3027 15.4343 16.8815 15.6132 16.6535C15.7874 16.4318 15.9347 16.2165 16.0297 16.0629C16.2165 15.7621 16.2751 15.4533 16.1769 15.2142C15.7336 14.1312 15.2755 13.0541 14.8026 11.9827C14.7092 11.7705 14.4321 11.6185 14.1803 11.5884C14.0948 11.5779 14.0093 11.5694 13.9238 11.5631C13.7112 11.5509 13.498 11.553 13.2857 11.5694L13.6056 11.5583Z" fill="#16192F" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="header__logo">
+                        <a class="header__logo-black" href="#"><img src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt=""></a>
+                        <a class="header__logo-white" href="#"><img src="<?php echo get_template_directory_uri(); ?>/image/logo-white.png" alt=""></a>
+                    </div>
+                    <div class="header__middle">
+                        <ul class="header__menu">
+                            <li class="header__menu-item btn-service"><a href="#" class="header__menu-text">Услуги</a></li>
+                            <li class="header__menu-item btn-about"><a href="#" class="header__menu-text">О нас</a></li>
+                            <li class="header__menu-item btn-portfolio"><a href="#" class="header__menu-text">Проекты</a></li>
+                            <li class="header__menu-item btn-faq"><a href="#" class="header__menu-text">Вопросы</a></li>
+                            <li class="header__menu-item btn-footer"><a href="#" class="header__menu-text">Контакты</a></li>
+                        </ul>
+                        <div class="header__middle-line">
+                            <img src="<?php echo get_template_directory_uri(); ?>/image/header__line.png" alt="">
+                        </div>
+                    </div>
+                    <div class="header__number"><a href="tel:79777777777">+7 (977) 777-77-77</a></div>
+                </div>
+                <button type="button" class="header__burger">
+                    <svg width="89" height="90" viewBox="0 0 89 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.938477" width="88.6154" height="88.6154" rx="19.6923" fill="white" />
+                        <path d="M21.6616 58.0462H47.5429M21.6616 45.2462H66.9539M41.0726 32.4462H66.9539" stroke="#16192F" stroke-width="5.90769" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="header__burger-body">
+                    <button type="button" class="header__burger-item headerService">
+                        <p>Услуги</p>
+                    </button>
+                    <button type="button" class="header__burger-item" data-section="aboutM">
+                        <p>О нас</p>
+                    </button>
+                    <button type="button" class="header__burger-item">
+                        <p>Проекты</p>
+                    </button>
+                    <button type="button" class="header__burger-item" data-section="faqM">
+                        <p>Вопросы</p>
+                    </button>
+                    <button type="button" class="header__burger-item" data-section="contactsM">
+                        <p>Контакты</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>

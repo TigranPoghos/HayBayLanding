@@ -6,120 +6,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const tl = gsap.timeline();
 
 
-    // Проверяем, был ли уже заход в этой сессии
-    const visited = sessionStorage.getItem("visited");
+    tl.to('.arrow', {
+        duration: 1,
+        ease: "power2.inOut",
+        clipPath: "inset(0% 0% 0% 0%)"
+    });
 
-    if (!visited) {
-        // Первый заход
-        tl.to('.titleGsap', {
-            backgroundSize: "100% 100%",
-            duration: 2,
-            ease: "power2.inOut",
-            delay: 0.5,
-        });
+    tl.from('.product__stand', {
+        right: '-650px',
+        duration: 1
+    }, '<');
 
-        tl.to('.titleGsap', {
-            left: 'auto',
-            bottom: 'auto',
-            duration: .7,
-        });
+    tl.to('.header__middle-line', {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1,
+        ease: "power2.inOut"
+    }, '<');
 
-        tl.to('.titleGsap', {
-            position: 'relative',
-            margin: '0 0 35px 0',
-            color: '#16192F',
-            duration: 0.5,
-        });
+    tl.from('.product__right', {
+        y: 20,
+        duration: 1,
+    }, '<');
 
-        tl.to('.main__fon', {
-            opacity: 0,
-            duration: 0.5,
-            zIndex: '-100',
-        }, '<');
+    tl.from('.header__top', {
+        bottom: '100px',
+        duration: 1,
+    }, '<')
 
-        tl.to('body', {
-            overflowY: 'auto'
-        });
-
-        // Второй блок анимаций
-        tl.to('.arrow', {
-            duration: 1,
-            ease: "power2.inOut",
-            clipPath: "inset(0% 0% 0% 0%)"
-        });
-
-        tl.from('.product__stand', {
-            right: '-650px',
-            duration: 1
-        }, '<');
-
-        tl.to('.header__middle-line', {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            duration: 1,
-            ease: "power2.inOut"
-        }, '<');
-
-        tl.from('.header__top', {
-            bottom: '100px',
-            duration: 1,
-        }, '<')
-
-        tl.from('.header__logo', {
-            x: -250,
-            duration: 1,
-        }, '<')
-
-        // Сохраняем отметку, что анимация уже проигрывалась
-        sessionStorage.setItem("visited", "true");
-
-    } else {
-        // Повторный заход — сразу финальные стили первого блока
-        gsap.set('.titleGsap', {
-            position: 'relative',
-            left: 'auto',
-            bottom: 'auto',
-            margin: '0 0 35px 0',
-            color: '#16192F'
-        });
-
-        gsap.set('body', { overflow: 'auto' });
-
-        gsap.set('.main__fon', { display: 'none' });
-
-        // И сразу запускаем второй блок
-        tl.to('.arrow', {
-            duration: 1,
-            ease: "power2.inOut",
-            clipPath: "inset(0% 0% 0% 0%)"
-        });
-
-        tl.from('.product__stand', {
-            right: '-650px',
-            duration: 1
-        }, '<');
-
-        tl.to('.header__middle-line', {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            duration: 1,
-            ease: "power2.inOut"
-        }, '<');
-
-        tl.from('.product__right', {
-            y: 20,
-            duration: 1,
-        }, '<');
-
-        tl.from('.header__top', {
-            bottom: '100px',
-            duration: 1,
-        }, '<')
-
-        tl.from('.header__logo', {
-            x: -250,
-            duration: 1,
-        }, '<')
-    }
-
+    tl.from('.header__logo', {
+        x: -250,
+        duration: 1,
+    }, '<')
 
     document.querySelectorAll ('.service__title').forEach
     (serviceTitle => {
@@ -268,18 +185,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    document.querySelectorAll('.FaqJs__item').forEach
-    (faqItem => {
-        gsap.from(faqItem, {
-            x: -1000,
-            duration: 1,
-            scrollTrigger: {
-                trigger: faqItem,
-                start: '100% bottom',
-                scrub: false
-            }
-        })
-    }) 
+    document.querySelectorAll('.FaqJs__item').forEach((faqItem, index) => {
+    // Проверяем ширину экрана
+    const isMobile = window.innerWidth <= 768;
+    
+    // Определяем направление анимации
+    let xValue = '-120%';
+    
+    if (isMobile) {
+        // На мобильных: нечетные слева, четные справа
+        xValue = index % 2 === 0 ? '-120%' : '120%';
+    }
+    
+    gsap.from(faqItem, {
+        x: xValue,
+        opacity: 0, // Добавляем fade эффект для плавности
+        duration: 1,
+        scrollTrigger: {
+            trigger: faqItem,
+            start: '100% bottom', // Улучшенный момент старта
+            scrub: false,
+        }
+    });
+    });
 
     gsap.from('.faq__letter', {
         x: 500,
@@ -456,6 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sectionsM = {
     aboutM: document.querySelector('.aboutM__title'),
+    portfolioM: document.querySelector('.best'),
     faqM: document.querySelector('.faqM'),
     contactsM: document.querySelector('.footerM')
     };
@@ -509,6 +438,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
     firstBtn.addEventListener('click', () => switchTabs('first'));
     secondBtn.addEventListener('click', () => switchTabs('second'));
+
+
+
+
+    gsap.from ('.header__burger', {
+        x: 200,
+        duration: 1,
+    })
+
+    gsap.to ('.productM__line', {
+        duration: 1,
+        ease: "none",
+        clipPath: "inset(0% 0% 0% 0%)"
+    })
+
+    gsap.from('.aboutM__subtitle-box', {
+        x:'-100%',
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.aboutM__subtitle-box',
+            start: '100% bottom',
+            scrub: false,
+        }
+    })
+
+    gsap.from('.aboutM__gallery-left', {
+        x: '-100%',
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.aboutM__gallery-left',
+            start: '100% bottom',
+            scrub: false,
+        }
+    })
+
+    gsap.from('.aboutM__gallery-right', {
+        x: '100%',
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.aboutM__gallery-left',
+            start: '100% bottom',
+            scrub: false,
+        }
+    })
+
+    document.querySelectorAll('.best__item:nth-child(even)').forEach
+    (bestitemEven => {
+        gsap.from(bestitemEven, {
+            x: '-100%',
+            duration: 1,
+            scrollTrigger: {
+                trigger: bestitemEven,
+                start: '100% bottom',
+                scrub: false
+            }
+        })
+    }) 
+
+    document.querySelectorAll('.best__item:nth-child(odd)').forEach
+    (bestitemOdd => {
+        gsap.from(bestitemOdd, {
+            x: '100%',
+            duration: 1,
+            scrollTrigger: {
+                trigger: bestitemOdd,
+                start: '100% bottom',
+                scrub: false
+            }
+        })
+    }) 
+
+    
+
 
 
 
