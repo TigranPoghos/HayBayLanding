@@ -1,6 +1,5 @@
     <?php get_header(); ?>
 
-    <div class="main__fon"></div>
     <main class="main">
         <div class="header__burger-opacity"></div>
         <div class="product">
@@ -10,7 +9,7 @@
                         <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/image/arrow.png" alt="">
                     </div>
                     <div class="product__right">
-                        <h1 class="title product__title titleGsap">Производство наружной рекламы по всей России</h1>
+                        <h1 id="heading" class="title product__title titleGsap">Производство наружной <br> рекламы по всей России</h1>
                         <ul class="product__menu">
                             <li class="product__menu-item">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,18 +44,19 @@
         <div class="service">
             <div class="container">
                 <div class="service__row row">
-                    <h1 class="title service__title">Услуги</h1>
+                    <h1 id="heading" class="title service__title">Услуги</h1>
                     <div class="service__line"></div>
                     <h3 class="service__subtitle">Изготовление объемных букв, букв из стали, латуни и др. материалов</h3>
                     <div class="service__box">
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-1"><img src="<?php echo get_template_directory_uri(); ?>/image/service-1.png" alt=""></div>
                             <p class="service__box-text">ОБЪЕМНЫЕ БУКВЫ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
-
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-2"><img src="<?php echo get_template_directory_uri(); ?>/image/service-2.png" alt=""></div>
                             <p class="service__box-text">ТОНКИЕ СВЕТОВЫЕ ПАНЕЛИ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -64,6 +64,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-3"><img src="<?php echo get_template_directory_uri(); ?>/image/service-3.png" alt=""></div>
                             <p class="service__box-text">ЛАЙТБОКСЫ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -71,6 +72,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-4"><img src="<?php echo get_template_directory_uri(); ?>/image/service-4.png" alt=""></div>
                             <p class="service__box-text">ОФОРМЛЕНИЯ <br> ЗОНЫ РЕСЕПШЕН</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -78,6 +80,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-5"><img src="<?php echo get_template_directory_uri(); ?>/image/service-5.png" alt=""></div>
                             <p class="service__box-text">Неоновые Вывески</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -85,6 +88,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-6"><img src="<?php echo get_template_directory_uri(); ?>/image/service-6.png" alt=""></div>
                             <p class="service__box-text">КОМПОЗИТНЫЕ КОРОБА</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -92,6 +96,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-7"><img src="<?php echo get_template_directory_uri(); ?>/image/service-7.png" alt=""></div>
                             <p class="service__box-text">РЕКЛАМНЫЕ СТЕНДЫ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -99,6 +104,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-8"><img src="<?php echo get_template_directory_uri(); ?>/image/service-8.png" alt=""></div>
                             <p class="service__box-text">КРЫШНЫЕ УСТАНОВКИ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -112,11 +118,12 @@
         <div class="print">
             <div class="container">
                 <div class="print__row row">
-                    <h1 class="title service__title">Полиграфия</h1>
+                    <h1 id="heading" class="title service__title">Полиграфия</h1>
                     <div class="service__line"></div>
                     <h3 class="service__subtitle">Изготовление полиграфии, листовок и тд</h3>
                     <div class="service__box">
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-9"><img src="<?php echo get_template_directory_uri(); ?>/image/service-9.png" alt=""></div>
                             <p class="service__box-text">ЛИСТОВКИ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -124,6 +131,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-9"><img src="<?php echo get_template_directory_uri(); ?>/image/service-9.png" alt=""></div>
                             <p class="service__box-text">ЛИСТОВКИ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -131,6 +139,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-9"><img src="<?php echo get_template_directory_uri(); ?>/image/service-9.png" alt=""></div>
                             <p class="service__box-text">ЛИСТОВКИ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -138,6 +147,7 @@
                             </button>
                         </div>
                         <div class="service__box-item">
+                            <div class="service__box-img service__box-img-9"><img src="<?php echo get_template_directory_uri(); ?>/image/service-9.png" alt=""></div>
                             <p class="service__box-text">ЛИСТОВКИ</p>
                             <button type="button" class="product__button service__box-button">
                                 <span class="button__text">Подробнее</span>
@@ -151,7 +161,7 @@
         <div class="about">
             <div class="container">
                 <div class="about__row row">
-                    <h1 class="about__title">О нас</h1>
+                    <h1 id="heading" class="about__title">О нас</h1>
                     <div class="about__line"></div>
                     <h3 class="about__subtitle">С 2020 года закрываем любые задачи по наружной рекламе</h3>
                     <p class="about__text">
@@ -180,7 +190,7 @@
             </svg>
             <div class="container portfolio__container">
                 <div class="portfolio__row row">
-                    <h1 class="portfolio__title">Наши проекты</h1>
+                    <h1 id="heading" class="portfolio__title">Наши проекты</h1>
                     <div class="portfolio__box">
                         <div class="portfolio__box-item"></div>
                         <div class="portfolio__box-item"></div>
@@ -192,7 +202,7 @@
         <div class="faq">
             <div class="container">
                 <div class="faq__row row">
-                    <h1 class="faq__title">Частые вопросы</h1>
+                    <h1 id="heading" class="faq__title">Частые вопросы</h1>
                     <div class="faq__line">
                         <svg width="930" height="2" viewBox="0 0 930 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1L929 1.00008" stroke="url(#paint0_linear_210_47)" stroke-width="2" stroke-linecap="round" />
@@ -324,7 +334,7 @@
                     <p class="productM__text">Привлекает внимание, повышает узнаваемость бренда и выглядит стильно.</p>
                     <div class="itemsM__change">
                         <button class="itemsM__change-button" id="firstBtn">Наружная реклама</button>
-                        <button class="itemsM__change-button" id="secondBtn">Листовки</button>
+                        <button class="itemsM__change-button" id="secondBtn">Полиграфия</button>
                     </div>
                 </div>
             </div>
@@ -333,42 +343,42 @@
             <div class="itemsM__row row">
                 <div id="first" class="itemsM__block active">
                     <h1 class="title productM__title-active">Оформление зоны ресепшен</h1>
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-3.jpg" alt=""></div>
                 </div>
                 <div id="first" class="itemsM__block active">
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-4.jpg" alt=""></div>
                     <h1 class="title productM__title-active">Лайтбоксы</h1>
                 </div>
                 <div id="first" class="itemsM__block active">
                     <h1 class="title productM__title-active">Композитные короба</h1>
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-5.jpg" alt=""></div>
                 </div>
                 <div id="first" class="itemsM__block active">
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-6.jpg" alt=""></div>
                     <h1 class="title productM__title-active">Рекламные стенды</h1>
                 </div>
                 <div id="first" class="itemsM__block active">
                     <h1 class="title productM__title-active">Световые панели</h1>
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-7.jpg" alt=""></div>
                 </div>
                 <div id="first" class="itemsM__block active">
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-9.jpg" alt=""></div>
                     <h1 class="title productM__title-active">Крышные установки</h1>
                 </div>
                 <div id="second" class="itemsM__block">
                     <h1 class="title productM__title-active">Листовки</h1>
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-8.jpg" alt=""></div>
                 </div>
                 <div id="second" class="itemsM__block">
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-8.jpg" alt=""></div>
                     <h1 class="title productM__title-active">Листовки</h1>
                 </div>
                 <div id="second" class="itemsM__block">
                     <h1 class="title productM__title-active">Листовки</h1>
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-8.jpg" alt=""></div>
                 </div>
                 <div id="second" class="itemsM__block">
-                    <div class="itemsM__block-img"></div>
+                    <div class="itemsM__block-img"><img src="<?php echo get_template_directory_uri(); ?>/image/serviceM-8.jpg" alt=""></div>
                     <h1 class="title productM__title-active">Листовки</h1>
                 </div>
             </div>
@@ -400,10 +410,14 @@
                     </foreignObject>
                 </svg>
                 <div class="aboutM__gallery">
-                    <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__1.png" alt="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__2.png" alt="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__3.png" alt="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__4.png" alt="">
+                    <div class="aboutM__gallery-left">
+                        <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__1.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__2.png" alt="">
+                    </div>
+                    <div class="aboutM__gallery-right">
+                        <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__3.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/image/aboutM__4.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>

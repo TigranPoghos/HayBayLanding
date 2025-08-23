@@ -7,11 +7,11 @@
                         г.Москва, р-н Октябрьский, ул Мирная д.в 26
                     </p>
                     <a href="mailto:example@mail.ru" class="footer__text footer__textM">example@mail.ru</a>
-                    <a href="tel:79777777777" class="footer__text footer__textM">Тел:+7 (977) 777-77-77</a>
+                    <a href="tel:+79777777777" class="footer__text footer__textM">Тел:+7 (977) 777-77-77</a>
                 </div>
                 <div class="footer__middle">
                     <h3 class="footer__title">Свяжитесь с нами</h3>
-                    <a class="footer__text" href="tel:797777777777">+7 (977) 777-77-77</a>
+                    <a class="footer__text" href="tel:+797777777777">+7 (977) 777-77-77</a>
                     <a class="footer__text" href="mailto:example@mail.ru">example@mail.ru</a>
                 </div>
                 <div class="footer__right">
@@ -52,6 +52,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/script/script.js"></script>
 </body>
 </html>

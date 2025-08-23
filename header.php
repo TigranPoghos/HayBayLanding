@@ -51,7 +51,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/image/header__line.png" alt="">
                         </div>
                     </div>
-                    <div class="header__number"><a href="tel:79777777777">+7 (977) 777-77-77</a></div>
+                    <div class="header__number"><a href="tel:+79777777777">+7 (977) 777-77-77</a></div>
                 </div>
                 <button type="button" class="header__burger">
                     <svg width="89" height="90" viewBox="0 0 89 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@
                     <button type="button" class="header__burger-item" data-section="aboutM">
                         <p>О нас</p>
                     </button>
-                    <button type="button" class="header__burger-item">
+                    <button type="button" class="header__burger-item" data-section="portfolioM">
                         <p>Проекты</p>
                     </button>
                     <button type="button" class="header__burger-item" data-section="faqM">

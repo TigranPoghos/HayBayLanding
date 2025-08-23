@@ -43,6 +43,10 @@ html {
     scrollbar-width: thin;
 }
 
+h1 {
+    opacity: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -87,7 +91,7 @@ body {
 }
 
 .button__text {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 16px;
     color: #EEE8DF;
 }
@@ -321,15 +325,50 @@ body {
         display: flex;
         flex-wrap: wrap;
 
+        &-img {
+            margin: auto;
+
+                 &-2 {
+                    max-width: 177px;
+                }
+
+                &-3 {
+                    max-width: 128px;
+                }
+                
+                &-4 {
+                    max-width: 187px;
+                }
+
+                &-5 {
+                    max-width: 226px;
+                }
+
+                &-6 {
+                    max-width: 278px;
+                }
+
+                &-7 {
+                    max-width: 102px;
+                }
+
+                &-8 {
+                    max-width: 226px;
+                }
+
+                &-9 {
+                    max-width: 230px;
+                }
+        }
+
         &-item {
             padding: 20px;
             box-sizing: border-box;
             width: calc(25% - 15px);
-            height: 300px;
             display: flex;
             flex-direction: column;
             margin-bottom: 15px;
-            background: #d9d9d9;
+            background: #fff;
             margin-right: 20px;
 
             &:nth-child(4n) {
@@ -338,9 +377,8 @@ body {
         }
 
         &-text {
-            margin-top: auto;
+            margin-top: 10px;
             margin-bottom: 7px;
-            
             font-weight: 600;
             font-size: 16px;
             color: #16192f;
@@ -685,6 +723,7 @@ body {
 
 .best {
     display: none;
+    overflow: hidden;
 }
 
 .faqM {
@@ -845,6 +884,10 @@ main.active {
             &-img {
                 background: linear-gradient(225deg, #7c87b2 0%, #de1cca 25%, #3c4a85 50%, #303c6c 75%, #252e52 100%);
                 width: 50%;
+
+                & img {
+                    height: 100%;
+                }
             }
         }
     }
@@ -994,9 +1037,42 @@ main.active {
         &__box {
             &-item {
                 width: calc(25% - 19px);
-                height: 400px;
                 margin-bottom: 20px;
                 margin-right: 25px;
+            }
+
+            &-img {
+                &-2 {
+                    max-width: 252px;
+                }
+
+                &-3 {
+                    max-width: 194px;
+                }
+                
+                &-4 {
+                    max-width: 270px;
+                }
+
+                &-5 {
+                    max-width: 301px;
+                }
+
+                &-6 {
+                    max-width: 312px;
+                }
+
+                &-7 {
+                    max-width: 108px;
+                }
+
+                &-8 {
+                    max-width: 301px;
+                }
+
+                &-9 {
+                    max-width: none;
+                }
             }
 
             &-text {
@@ -1074,7 +1150,7 @@ main.active {
 
         &__line {
             & svg {
-                width: 988px;
+                width: auto;
             }
         }
     }
@@ -1311,7 +1387,6 @@ main.active {
         &__box {
             &-item {
                 width: calc(25% - 12px);
-                height: 200px;
                 padding: 15px;
                 margin-bottom: 10px;
                 margin-right: 15px;
@@ -1326,6 +1401,40 @@ main.active {
 
                 & span {
                     font-size: 12px;
+                }
+            }
+
+            &-img {
+                &-2 {
+                    max-width: 138px;
+                }
+
+                &-3 {
+                    max-width: 100px;
+                }
+                
+                &-4 {
+                    max-width: 150px;
+                }
+
+                &-5 {
+                    max-width: 175px;
+                }
+
+                &-6 {
+                    max-width: none;
+                }
+
+                &-7 {
+                    max-width: 79px;
+                }
+
+                &-8 {
+                    max-width: 175px;
+                }
+
+                &-9 {
+                    max-width: none;
                 }
             }
         }
@@ -1590,6 +1699,40 @@ main.active {
                     font-size: 10px;
                 }
             }
+
+            &-img {
+                &-2 {
+                    max-width: 94px;
+                }
+
+                &-3 {
+                    max-width: 77px;
+                }
+                
+                &-4 {
+                    max-width: 112px;
+                }
+
+                &-5 {
+                    max-width: 175px;
+                }
+
+                &-6 {
+                    max-width: none;
+                }
+
+                &-7 {
+                    max-width: 61px;
+                }
+
+                &-8 {
+                    max-width: 175px;
+                }
+
+                &-9 {
+                    max-width: none;
+                }
+            }
         }
     }
 
@@ -1831,8 +1974,8 @@ main.active {
         }
     }
 
-    .main__fon {
-        display: none;
+    .main {
+        overflow-x: hidden;
     }
 
     .title {
@@ -1968,9 +2111,11 @@ main.active {
             &-left {
                 gap: 5px;
                 display: flex;
+                width: 50%;
             }
 
             &-right {
+                width: 50%;
                 display: flex;
                 gap: 5px;
             }
@@ -2030,6 +2175,7 @@ main.active {
         position: relative;
         z-index: 2;
         margin-bottom: 175px;
+        background-color: #EEE8DF;
 
         &__row {
             flex-direction: column;
@@ -2211,7 +2357,7 @@ main.active {
         }
 
         & .serviceM {
-            margin-top: -60px;
+            margin-top: -65px;
         }
 
         & .itemsM {
@@ -2275,7 +2421,7 @@ main.active {
         }
 
         & .serviceM {
-            margin-top: -60px;
+            margin-top: -65px;
 
             & .productM__text {
                 margin-bottom: 50px;
@@ -2446,7 +2592,7 @@ main.active {
         }
 
         & .serviceM {
-            margin-top: -30px;
+            margin-top: -35px;
         }
 
         & .itemsM {
@@ -2587,3 +2733,4 @@ main.active {
         }
     }
 }
+

@@ -1,9 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    gsap.registerPlugin(DrawSVGPlugin,MorphSVGPlugin,ScrollTrigger)
+    gsap.registerPlugin(DrawSVGPlugin,MorphSVGPlugin,ScrollTrigger,SplitText)
     const mm = gsap.matchMedia();
     const tl = gsap.timeline();
+
+
+    gsap.set("h1", { opacity: 1 });
+
+    document.querySelectorAll('h1#heading').forEach((heading, index) => {   
+        document.fonts.ready.then(() => {
+            let split = SplitText.create(heading, { 
+                type: "chars",
+                charsClass: `char-${index}`
+            });
+            gsap.from(split.chars, {
+                y: 20,
+                autoAlpha: 0,
+                stagger: 0.03,
+                scrollTrigger: {
+                    trigger: heading,
+                    start: '100% bottom', 
+                    scrub: false,
+                }
+            });  
+        })
+    });
 
 
     tl.to('.arrow', {
@@ -38,21 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 1,
     }, '<')
 
-    document.querySelectorAll ('.service__title').forEach
-    (serviceTitle => {
-        if (serviceTitle) {
-            gsap.from(serviceTitle, {
-                y: 20,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: serviceTitle,
-                    start: '100% bottom',
-                    scrub: false,
-                }
-            })
-        }
-    })
-
     document.querySelectorAll ('.service__line').forEach
     (serviceLine => {
         if (serviceLine) {
@@ -83,16 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }
     })
-
-    gsap.from('.about__title', {
-        y: 20,
-        duration: 1,
-        scrollTrigger: {
-            trigger: '.about__title',
-            start: '100% bottom',
-            scrub: false
-        }
-    }) 
 
     gsap.to('.about__line', {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -144,26 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    gsap.from('.portfolio__title', {
-        y: 20,
-        duration: 1,
-        scrollTrigger: {
-            trigger: '.portfolio__title',
-            start: '100% bottom',
-            scrub: false
-        }
-    })
-
-    gsap.from('.faq__title', {
-        y: 20,
-        duration: 1,
-        scrollTrigger: {
-            trigger: '.faq__title',
-            start: '100% bottom',
-            scrub: false
-        }
-    })
-
     gsap.to('.faq__line', {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
@@ -186,27 +163,25 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     document.querySelectorAll('.FaqJs__item').forEach((faqItem, index) => {
-    // Проверяем ширину экрана
-    const isMobile = window.innerWidth <= 768;
     
-    // Определяем направление анимации
-    let xValue = '-120%';
-    
-    if (isMobile) {
-        // На мобильных: нечетные слева, четные справа
-        xValue = index % 2 === 0 ? '-120%' : '120%';
-    }
-    
-    gsap.from(faqItem, {
-        x: xValue,
-        opacity: 0, // Добавляем fade эффект для плавности
-        duration: 1,
-        scrollTrigger: {
-            trigger: faqItem,
-            start: '100% bottom', // Улучшенный момент старта
-            scrub: false,
+        const isMobile = window.innerWidth <= 768;
+        
+        let xValue = '-120%';
+        
+        if (isMobile) {
+            xValue = index % 2 === 0 ? '-120%' : '120%';
         }
-    });
+        
+        gsap.from(faqItem, {
+            x: xValue,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: faqItem,
+                start: '100% bottom',
+                scrub: false,
+            }
+        });
     });
 
     gsap.from('.faq__letter', {
@@ -464,7 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     gsap.from('.aboutM__gallery-left', {
-        x: '-100%',
+        x: '-120%',
         duration: 1,
         scrollTrigger: {
             trigger: '.aboutM__gallery-left',
@@ -474,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     gsap.from('.aboutM__gallery-right', {
-        x: '100%',
+        x: '120%',
         duration: 1,
         scrollTrigger: {
             trigger: '.aboutM__gallery-left',
@@ -486,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.best__item:nth-child(even)').forEach
     (bestitemEven => {
         gsap.from(bestitemEven, {
-            x: '-100%',
+            x: '-120%',
             duration: 1,
             scrollTrigger: {
                 trigger: bestitemEven,
@@ -499,7 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.best__item:nth-child(odd)').forEach
     (bestitemOdd => {
         gsap.from(bestitemOdd, {
-            x: '100%',
+            x: '120%',
             duration: 1,
             scrollTrigger: {
                 trigger: bestitemOdd,
@@ -508,10 +483,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     }) 
-
-    
-
-
 
 
 
